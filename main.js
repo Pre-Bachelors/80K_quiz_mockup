@@ -1,3 +1,8 @@
+                  
+/* TODO add background imgs */
+/* TODO send results instead of simply going to final.html */
+/* ps. we're skipping last question (the checkboxes)*/
+/* use local storage */
 
 $(document).ready(function() {
     //modal window helpers
@@ -45,7 +50,16 @@ $(document).ready(function() {
     for (key in answers) {
         answers[key] = {answer: '', answered: false};
     }
+    
+    // Functions to load & save objects using localStorage, credit to Dan Cruickshank,
+    // http://getfishtank.ca/blog/using-html5-localstorage-to-store-json
+    function load() {
+        return JSON.parse(sessionStorage.getItem("80k_answers"));
+    }
 
+    function save(obj) {
+            sessionStorage.setItem("80k_answers", JSON.stringify(obj));
+    }
 
     /*
      * Initializes the app, and add event listeners
@@ -103,17 +117,15 @@ $(document).ready(function() {
                 // highlight selected - add class: selected_btn
                 var $answerEl = $answerRadio.next();
                 $answerEl.addClass('selected_btn');
-                }
-
-                // check radio btn
-                $answerRadio.attr('checked', true);
-                // add continue button
-                $('.continue').css("display", "block", "important");
             }
+
+            // check radio btn
+            $answerRadio.attr('checked', true);
+            // add continue button
+            $('.continue').css("display", "block", "important");            
         }
     }
-                  
-/* TODO add checkboxes & background imgs */
+
 
     /*
      * Loads a question, using jQuery's ajax .load() method.
@@ -184,8 +196,7 @@ $(document).ready(function() {
                 done: function(){ // on animation's (successful) completion
                     slideDone($questionContainer, $tempContainer);
                 }});
-            });
-        }
+        });
     }
 
     /* Cleans the page after the animation has run */
@@ -234,11 +245,13 @@ $(document).ready(function() {
         if (currentIndex < 4) { // if not last question
             loadQuestion(questions[currentIndex + 1]);
         } else {
+            // save answers
+            save(answers);
             // load final page
             window.location.replace('final.html');
         }
     }
-/* TODO send results instead of simply going to final.html */
+
 
 
     /* Handles selection of textAreas */

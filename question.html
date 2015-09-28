@@ -8,34 +8,30 @@
     <link href="grid.css" rel="stylesheet" type="text/css" />
     <link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css' />
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="moodism.js"></script>
+    <script src="main.js"></script>
 </head>
 
 <body>
 
     <div class="container_12">
         <div class="grid_12">
-                <h1>M</h1>
+                <h1>Career Quiz</h1>
         </div>
     </div>
 
     <div class="container_12" id="main">
-    <!-- Media Type -->
         <div class="grid_8" id="questions_container">
-            <div id="media">
-                <h2>Pick a media type:</h2>
-                <form class="options">
+            <div id="stem">
+                <h2>Were you good at math, science or logic when you studied them? </h2>
+
+                <form class="double_choice">
                     <label>
-                        <input type="radio" name="answer" value="photo" />
-                        <button type="button" class="textAnswer">Photo</button>
+                        <input type="radio" name="STEM" value="science" />
+                        <button type="button" class="textAnswer">Yes</button>
                     </label>
                     <label>
-                        <input type="radio" name="answer" value="video" />
-                        <button type="button" class="textAnswer">Video</button>
-                    </label>
-                    <label>
-                        <input type="radio" name="answer" value="poem" />
-                        <button type="button" class="textAnswer">Poem</button>
+                        <input type="radio" name="STEM" value="noscience" />
+                        <button type="button" class="textAnswer">No</button>
                     </label>
                     <button type="submit" class="continue">Continue</button>
                 </form>
@@ -45,11 +41,12 @@
         <div class="grid_2"> <div class="arrow">you are here</div> </div>
         <div class="grid_2">
             <!-- Right hand navigation buttons -->
-            <button type="button" class="nav_btn" data-questionref="media"></button>
-            <button type="button" class="nav_btn" data-questionref="color"></button>
-            <button type="button" class="nav_btn" data-questionref="place"></button>
-            <button type="button" class="nav_btn" data-questionref="dog"></button>
-            <button type="button" class="nav_btn" data-questionref="year"></button>
+            <button type="button" class="nav_btn" data-questionref="stem"></button>
+            <button type="button" class="nav_btn" data-questionref="writing"></button>
+            <button type="button" class="nav_btn" data-questionref="impact"></button>
+            <button type="button" class="nav_btn" data-questionref="competition"></button>
+            <button type="button" class="nav_btn" data-questionref="timing"></button>
+            <button type="button" class="nav_btn" data-questionref="contribution"></button>
         </div>
 
     </div>
