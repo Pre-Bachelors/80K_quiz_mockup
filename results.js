@@ -16,7 +16,7 @@ $(document).ready(function() {
     
     var results = getResult(answers, questions);
     var jobs = getJobs(results);
-    
+    loadJobs(jobs);
                                                                                                 console.log(results);
                                                                                                 console.log(jobs);
     
@@ -123,6 +123,42 @@ $(document).ready(function() {
             } else if (!(answers[0])) { // if !STEM
                 return ['politics', 'grantmaker'];
             }
+        }
+    }
+    
+    /*
+     * Loads the recommended jobs
+     * Parameter: jobs, array containing the users answers to the quiz
+     */
+    function loadJobs(jobs) {
+        var jobContainer = $('#final');
+        if (jobs[1]) { // if there are 2 suggested jobs
+            var flag = [false, false];
+            var $tempContainer = $('<div></div>');
+            // load new question
+            jobContainer.load('results.html #' + jobs[0], function(){ // on content loaded
+                flag[0] = true;
+                appendJob(flag, $tempContainer);
+            });
+            $tempContainer.load('results.html #' + jobs[1], function(){ // on content loaded
+                flag[1] = true;
+                appendJob(flag, $tempContainer);
+            });
+        } else { // else only 1 suggested job
+            jobContainer.load('results.html #' + jobs[0]);
+        }
+    }
+    
+    /*
+     * Auxiliary call-back function. Appends the second job to the document.
+     * Parameters: flag, a boolean array of length 2
+     *             container, jQuery container of the second job
+     */
+    function appendJob(flag, container) {
+        if (flag[0] && flag[1]) { // if both jobs are loaded
+            // append second job to the first
+            var jobContainer = $('#final').parent();
+            jobContainer.append(container);
         }
     }
 });
