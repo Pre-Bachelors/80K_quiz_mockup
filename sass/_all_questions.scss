@@ -42,8 +42,8 @@ label > input { /* HIDE RADIO */
     overflow: hidden;
 }
 
-.question > img {
-    position: absolute;
+.question > #main img {
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;

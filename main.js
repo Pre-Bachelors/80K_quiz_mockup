@@ -1,8 +1,4 @@
-                  
-/* TODO add background imgs */
-/* TODO send results instead of simply going to final.html */
-/* ps. we're skipping last question (the checkboxes)*/
-/* use local storage */
+/* note: we're skipping last question (the checkboxes)*/
 
 $(document).ready(function() {
     //modal window helpers

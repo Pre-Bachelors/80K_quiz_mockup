@@ -67,6 +67,10 @@
     color: $main-blue;
 }
 
+.start, .about {
+    margin-top: 5%;
+}
+
 .start {
     @extend .read;
     font-size: $btn-text;
