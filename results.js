@@ -58,9 +58,9 @@ $(document).ready(function() {
         } else if (!(answers[0] || answers[1] || answers[2] || answers[3])) { // else if all no
             return ['policy'];
         } else if (answers[4] == 'early') { // else if early
-            if (!(answers[2] || answers[3] || answers[1])) { // else if !risk && !competitive && !STEM
+            if (!(answers[2] || answers[3] || answers[0])) { // else if !risk && !competitive && !STEM
                 return ['think', 'marketing'];
-            } else if (!(answers[2] || answers[3] || answers[0])) { // else if !risk && !competitive && !PR
+            } else if (!(answers[2] || answers[3] || answers[1])) { // else if !risk && !competitive && !PR
                 return ['phd', 'data'];
             } else if (!(answers[2] || answers[3])) { // else if !risk && !competitive
                 return ['phd', 'data'];
@@ -80,9 +80,9 @@ $(document).ready(function() {
                 return ['politics', 'charity'];
             }
         } else if (answers[4] == 'middle') { // else if middle
-            if (!(answers[2] || answers[3] || answers[1])) { // else if !risk && !competitive && !STEM
+            if (!(answers[2] || answers[3] || answers[0])) { // else if !risk && !competitive && !STEM
                 return ['grantmaker', 'think'];
-            } else if (!(answers[2] || answers[3] || answers[0])) { // else if !risk && !competitive && !PR
+            } else if (!(answers[2] || answers[3] || answers[1])) { // else if !risk && !competitive && !PR
                 return ['phd', 'data'];
             } else if (!(answers[2] || answers[3])) { // else if !risk && !competitive
                 return ['grantmaker', 'think'];
@@ -102,9 +102,9 @@ $(document).ready(function() {
                 return ['politics', 'charity'];
             }
         } else { // timing = late
-            if (!(answers[2] || answers[3] || answers[1])) { // else if !risk && !competitive && !STEM
+            if (!(answers[2] || answers[3] || answers[0])) { // else if !risk && !competitive && !STEM
                 return ['grantmaker', 'policy'];
-            } else if (!(answers[2] || answers[3] || answers[0])) { // else if !risk && !competitive && !PR
+            } else if (!(answers[2] || answers[3] || answers[1])) { // else if !risk && !competitive && !PR
                 return ['policy', 'phd'];
             } else if (!(answers[2] || answers[3])) { // else if !risk && !competitive
                 return ['grantmaker', 'policy'];
