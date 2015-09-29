@@ -1,21 +1,36 @@
 
 /* ======== Final page ======== */
-iframe {
-    margin: 50px auto;
-}
 
 #finalside {
     margin-left: 12px;
 }
 
-#final {
-    position: relative;
-    top: -130px;
-}
-
-#final * {
-    text-align: center;
-}
-
 .startOver{
+}
+
+#results {
+    div {
+        margin-top: 5%;
+        &:last-child {
+            padding-top: 0.5%;
+        }
+        img {
+            width: 30%;
+            float: left;
+            margin: 0.5% 3% 0 0;
+            max-height: 190px;
+            max-width: 283.5px;
+        }
+        h2 {
+            text-align: left;
+            color: $dark-blue;
+        }
+        p {
+            text-align: left;
+            line-height: 1.3em;
+            &:last-child {
+                margin-top: 0.3em;
+            }
+        }
+    }
 }

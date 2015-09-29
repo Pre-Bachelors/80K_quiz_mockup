@@ -17,8 +17,6 @@ $(document).ready(function() {
     var results = getResult(answers, questions);
     var jobs = getJobs(results);
     loadJobs(jobs);
-                                                                                                console.log(results);
-                                                                                                console.log(jobs);
     
     
     /*

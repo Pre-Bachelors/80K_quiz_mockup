@@ -5,49 +5,24 @@
     <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="grid.css" rel="stylesheet" type="text/css" />
-    <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:400,700' rel='stylesheet' type='text/css'>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="results.js"></script>
 </head>
 
 <body>
+    
+    <div class="header">
+        <button type="button" class="read">Read our career guide</button>
+        <button type="button" class="articles">Key articles</button>
+        <img src="images/80k.png" class="logo" />
+        <a href="#" class="abt">About</a>
+        <a href="#" class="community">Community</a>
+        <a href="#" class="blog">Blog</a>
+    </div>
+    
     <div class="container_12">
-        <div class="grid_12">
-                <h1>M</h1>
-        </div>
-         <div id="finalside" class="grid_1">
-            <button type="button" class="side home">&#8962</button>
-            <button type="button" class="side aboutbtn">?</button>
-            <a href="#openModal_about_final"></a>
-            <div id="openModal_about_final" class="modalDialog">
-                <div>
-                    <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <h2>About</h2>
-                        <p>This website caters to your mood. We'll celebrate victories with you and cheer you up when you're blue.</p>
-                        <p>You only need to answer a few short questions and you will be rewarded with a mood token at the end.</p>
-                        <p>Enjoy!</p>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="side contact">&#9993</button>
-            <a href="#openModal_contact_final"></a>
-            <div id="openModal_contact_final" class="modalDialog">
-                <div>
-                    <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <h2>Contact Us</h2>
-                        <p>We're three seniors at Macalester. Contact us at:</p>
-                        <br>
-                        <p>Barbara: <a href="mailto:bborgesr@macalester.edu?Subject=Moodism%20Website" target="_top">bborgesr@macalester.edu</a></p>
-                        <p>Annabelle: <a href="mailto:anichol1@macalester.edu?Subject=Moodism%20Website" target="_top">anichol1@macalester.edu</a></p>
-                        <p>Judy: <a href="mailto:jsyrkinn@macalester.edu?Subject=Moodism%20Website" target="_top">jsyrkinn@macalester.edu</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid_10">
+        <div class="grid_11" id="results">
             <div id="final"></div>
         </div>
 

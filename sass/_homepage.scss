@@ -78,13 +78,21 @@
     background-color: #ddd;
     border-color: white;
     color: black;
+    
+    /* bigger size */
+    width: 17%;
+    height: 100px;
+    margin: 5%;
 }
 
 .about {
     @extend .start;
     background-color: $main-blue;
     border-color: white;
-    color: white;
+    a {
+        color: white;
+        text-decoration: none;
+    }
 }
 
 .start:hover, .about:hover {

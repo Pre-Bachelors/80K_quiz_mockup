@@ -16,6 +16,10 @@ $(document).ready(function() {
     $('.contact').click(function() {
         $(this).next()[0].click();
     });
+    
+    $('.about').click(function() {
+        window.location.replace('/#openModal');
+    });
 
     // start with homepage
      $('.start').click(function() {
