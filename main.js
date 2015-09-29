@@ -38,7 +38,7 @@ $(document).ready(function() {
 
     // initialize app
     var $form = $('form');
-    var questions = ['stem', 'writing', 'impact', 'competition', 'timing', 'contribution'];
+    var questions = ['stem', 'writing', 'impact', 'competition', 'timing'];
 
     // remember answers using answer obj:
     var answers = {};
