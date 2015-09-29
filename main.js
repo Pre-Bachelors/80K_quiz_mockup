@@ -22,7 +22,7 @@ $(document).ready(function() {
     });
 
     // start with homepage
-     $('.start').click(function() {
+    $('.start').click(function() {
          window.location.replace('question.html');
     });
 

@@ -13,12 +13,12 @@ $(document).ready(function() {
     // init variables
     var answers = load();
     var questions = ['stem', 'writing', 'impact', 'competition', 'timing'];
-    
+
     var results = getResult(answers, questions);
     var jobs = getJobs(results);
     loadJobs(jobs);
     
-    
+                                                    
     /*
      * create an array to store the answers (same order as the index array)
      * Parameters: the answer obj
@@ -99,7 +99,7 @@ $(document).ready(function() {
             } else if (!(answers[0])) { // if !STEM
                 return ['politics', 'charity'];
             }
-        } else { // timing = late
+        } else if (answers[4] == 'late') { // timing = late
             if (!(answers[2] || answers[3] || answers[0])) { // else if !risk && !competitive && !STEM
                 return ['grantmaker', 'policy'];
             } else if (!(answers[2] || answers[3] || answers[1])) { // else if !risk && !competitive && !PR

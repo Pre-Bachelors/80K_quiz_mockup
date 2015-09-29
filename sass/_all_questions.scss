@@ -1,7 +1,7 @@
 
 /* ======== All Questions ======== */
 form {
-    margin-top: 3%;
+    margin-top: 3% auto 0 auto;
 }
 
 .prompt {
@@ -11,13 +11,50 @@ form {
 .options, .label{
     text-align: center;
 }
-
-label > input { /* HIDE RADIO */
-    display: none;
+label {
+    float: left;
+    width: 50%;
+    & > input { /* HIDE RADIO */
+        display: none;
+    }
 }
 
 .textAnswer {
     @extend .about;
+    
+    width: 40%;
+    min-height: 75px;
+    height: auto;
+    margin: 12% 15% 0 35%;
+    
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    border-radius: 5%;
+    
+    .sub-info {
+        font-size: $text-size*0.5;
+        line-height: 0;
+    }
+}
+                                    /// fix this effffing thing
+.double-choice > form {
+    label:nth-child(2) > button.textAnswer {
+        margin: 12% 35% 0 15% !important;
+    }
+}
+
+.triple-choice form {
+    label {
+        width: 33%;
+        &:nth-child(3) > p {
+            font-size: $text-size*0.5;
+        }
+    }
+    .textAnswer {
+        min-height: 200px;
+        width: 80%;
+        margin: 12% 10% 0;
+    }
 }
 
 .textAnswer:hover, .selected_btn {
