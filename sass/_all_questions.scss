@@ -1,7 +1,13 @@
-
 /* ======== All Questions ======== */
+#questions_container {
+    margin-top: 10%;
+}
+
 form {
     margin-top: 3% auto 0 auto;
+    & > button {
+        
+    }
 }
 
 .prompt {
@@ -27,13 +33,16 @@ label {
     height: auto;
     margin: 12% 15% 0 35%;
     
+    font-size: $text-size*1.1;
+    
     -webkit-border-radius: 5%;
     -moz-border-radius: 5%;
     border-radius: 5%;
     
     .sub-info {
+        display: block;
         font-size: $text-size*0.5;
-        line-height: 0;
+        line-height: 150%;
     }
 }
                                     /// fix this effffing thing
@@ -47,7 +56,9 @@ label {
     label {
         width: 33%;
         &:nth-child(3) > p {
-            font-size: $text-size*0.5;
+            width: 70%;
+            margin: 0 auto;
+            font-size: $text-size*0.7;
         }
     }
     .textAnswer {
@@ -59,19 +70,6 @@ label {
 
 .textAnswer:hover, .selected_btn {
     border-color: $dark-blue;
-}
-
-.continue:before {
-    content: " ";
-    display: block;
-}
-
-.continue {
-    bottom: 0px;
-    display: none;
-    background-color: $main-purple;
-    font-weight: 900;
-    border: 3px solid $cream;
 }
 
 .question {

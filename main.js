@@ -18,7 +18,7 @@ $(document).ready(function() {
     });
     
     $('.about').click(function() {
-        window.location.replace('/#openModal');
+        window.location.replace('index.html#openModal');
     });
 
     // start with homepage
@@ -120,9 +120,7 @@ $(document).ready(function() {
             }
 
             // check radio btn
-            $answerRadio.attr('checked', true);
-            // add continue button
-            $('.continue').css("display", "block", "important");            
+            $answerRadio.attr('checked', true);    
         }
     }
 
@@ -135,11 +133,6 @@ $(document).ready(function() {
         // change nav buttons color
         $nav_button = $('.nav_btn[data-questionref=' + page + ']');
         $nav_button.addClass('past_nav_btn');
-
-        // ckeck if "you are here" arrow exists
-        if( $('.arrow').length ) {
-            $('.arrow').css("display", "none", "important"); // if so, remove it
-        }
 
         // change pages using animation
         slide(page);
@@ -214,7 +207,7 @@ $(document).ready(function() {
         // reset event listeners
         init();
 
-        // if going to previous questions, highlight previous answer and keep continue btn on
+        // if going to previous questions, highlight previous answer
         getAnswer(getQuestion());
     }
 
@@ -233,7 +226,9 @@ $(document).ready(function() {
 
     /* Handles form submission */
     function formSubmit(event) {
-        event.preventDefault();
+        if (event) { // fix not using continue btn
+            event.preventDefault();
+        }
         // get question's name
         var question = getQuestion();
         // get selected radio btn (= answer)
@@ -266,8 +261,8 @@ $(document).ready(function() {
         $selected.addClass('selected_btn');
         // check radio btn
         $selected.prev().attr('checked', true);
-        // add continue button
-        $('.continue').css("display", "block", "important");
+        // got to next question
+        formSubmit(null); 
     }
 
 

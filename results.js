@@ -13,11 +13,13 @@ $(document).ready(function() {
     // init variables
     var answers = load();
     var questions = ['stem', 'writing', 'impact', 'competition', 'timing'];
+                                                                                            console.log(answers);
 
     var results = getResult(answers, questions);
     var jobs = getJobs(results);
     loadJobs(jobs);
-    
+                                                                                            console.log(results);
+                                                                                            console.log(jobs);
                                                     
     /*
      * create an array to store the answers (same order as the index array)
@@ -130,7 +132,7 @@ $(document).ready(function() {
      */
     function loadJobs(jobs) {
         var jobContainer = $('#final');
-        if (jobs[1]) { // if there are 2 suggested jobs
+        if (typeof jobs[1] !== "undefined") { // if there are 2 suggested jobs
             var flag = [false, false];
             var $tempContainer = $('<div></div>');
             // load new question
