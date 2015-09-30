@@ -39,7 +39,7 @@ $(document).ready(function() {
     });
 
     // if on homepage, alert about browser compatibility
-    if (JSON.stringify(window.location.href).indexOf("index") > -1) {
+    if (!(JSON.stringify(window.location.href).indexOf("question") > -1)) {
         alert('This mockup only works in Chrome or chrome-based browsers (i.e. Opera).');
     }
     
@@ -265,7 +265,7 @@ $(document).ready(function() {
         var $selected = $(event.target);
         // see if selected is btn, if not, selected is selected's parent (aka a button)
         if (event.target.nodeName == 'SPAN') {
-            $selected = $(selected.parent());
+            $selected = $($selected.parent());
         }
         // remove highlights (of all bts)
         $selected.parent().parent().find('.textAnswer').each(function() {
