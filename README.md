@@ -3,7 +3,7 @@ Beatriz Borges
 
 ## Overview
 A quick quiz mock-up, based on [80,000 Hours Career quiz](https://80000hours.org/career-guide/career-recommender/#/).
-It's slightly more evolved than the typical mockup, but it's not totally functional either. `As of now, only works on Chrome (and chrome-based browsers, like Opera).`
+It's slightly more evolved than the typical mockup, but it's not totally functional either.
 
 If you only want to see it running and not have to download it, check it out [on my website](http://obiwit.com/80k).
 
@@ -17,3 +17,4 @@ I believe this mock-up makes the whole process much more intuitive, since as soo
 I also decided to 'hide' the about so that it is only visible when the user click on the respective button (a pop-up window appears). In addition to making things more readable, this also allows the user to not have to wave through unnecessary details if they're already familiar with the project.
 
 ### Development
+Given that I did this from scratch, and although it's not the finished product, it took me about 3 (slightly intensive) days to get togehter. This is completely front-end (remember, this is only a mock-up!), but the real implementation would use the full stack.
