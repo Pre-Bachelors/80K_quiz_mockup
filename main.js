@@ -44,7 +44,7 @@ $(document).ready(function() {
     }
     
     // initialize app
-    var $form = $('form');
+    var $form = $('#form');
     var questions = ['stem', 'writing', 'impact', 'competition', 'timing'];
     var modalCount = 0;
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
     for (key in answers) {
         answers[key] = {answer: '', answered: false};
     }
-    console.log(answers);
+                                                                                                                            console.log(answers);
     
     // Functions to load & save objects using localStorage, credit to Dan Cruickshank,
     // http://getfishtank.ca/blog/using-html5-localstorage-to-store-json
@@ -115,8 +115,8 @@ $(document).ready(function() {
      * Highlights the previous answer chosen for the question, if it was answered previously
      * Parameters: name of question (string)
      */
-    var answerRadio;
     function getAnswer(page) {
+        var $answerRadio;
         // check if question was answered
         if (answers[page].answered) {
             var previousAnswer = answers[page].answer;
@@ -131,7 +131,6 @@ $(document).ready(function() {
 
             // check radio btn
             $answerRadio.attr('checked', false);
-                                                                    // GENIUS
         }
     }
 
@@ -243,7 +242,7 @@ $(document).ready(function() {
         // get question's name
         var question = getQuestion();
         // get selected radio btn (= answer)
-        var selectedAnswer = $form.find(':checked').val();
+        var selectedAnswer = $form.find('button.selected_btn').prev().val();
         // save answer
         saveAnswer(question, selectedAnswer);
         // load next question

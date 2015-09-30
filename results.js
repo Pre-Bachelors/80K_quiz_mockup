@@ -13,15 +13,12 @@ $(document).ready(function() {
     // init variables
     var answers = load();
     var questions = ['stem', 'writing', 'impact', 'competition', 'timing'];
-                                                                                                                                                        console.log(answers);
 
     var results = getResult(answers, questions);    
     
-                                                                                                                                                        console.log(results);
     var jobs = getJobs(results);
     loadJobs(jobs);
-      
-                                                                                                                                                        console.log(jobs);
+    
                                                     
     /*
      * create an array to store the answers (same order as the index array)
