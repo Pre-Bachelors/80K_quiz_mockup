@@ -37,11 +37,6 @@ $(document).ready(function() {
     $('.start').click(function() {
          window.location.replace('question.html');
     });
-
-    // if on homepage, alert about browser compatibility
-    if (!((JSON.stringify(window.location.href).indexOf("question") > -1) || (JSON.stringify(window.location.href).indexOf("openModal") > -1) || (JSON.stringify(window.location.href).indexOf("close") > -1))) {
-        alert('This mockup only works in Chrome or chrome-based browsers (i.e. Opera).');
-    }
     
     // initialize app
     var $form = $('#form');
