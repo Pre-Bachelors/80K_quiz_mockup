@@ -39,7 +39,7 @@ $(document).ready(function() {
     });
 
     // if on homepage, alert about browser compatibility
-    if (!(JSON.stringify(window.location.href).indexOf("question") > -1)) {
+    if (!((JSON.stringify(window.location.href).indexOf("question") > -1) || (JSON.stringify(window.location.href).indexOf("openModal") > -1) || (JSON.stringify(window.location.href).indexOf("close") > -1))) {
         alert('This mockup only works in Chrome or chrome-based browsers (i.e. Opera).');
     }
     
