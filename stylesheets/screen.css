@@ -146,58 +146,66 @@ em {
   pointer-events: none;
   color: black !important;
 }
-
-/* line 19, ../sass/_modal.scss */
+/* line 18, ../sass/_modal.scss */
 .modalDialog:target {
   opacity: 1;
   pointer-events: auto;
 }
-
-/* line 24, ../sass/_modal.scss */
+/* line 23, ../sass/_modal.scss */
 .modalDialog > div {
-  width: 400px;
+  width: 440.0px;
   height: 400px;
   position: relative;
   top: 45px;
-  border-radius: 50%;
+  border-radius: 3%;
   margin: auto;
-  background: #ffffcc;
+  background: white;
   box-sizing: padding-box;
 }
-
-/* line 36, ../sass/_modal.scss */
+/* line 33, ../sass/_modal.scss */
+.modalDialog > div > div {
+  position: relative;
+  top: 20px;
+  margin: 50px 40px 0px 40px;
+}
+/* line 38, ../sass/_modal.scss */
 .modalDialog > div > div > * {
   color: #343434;
 }
-
-/* line 40, ../sass/_modal.scss */
+/* line 41, ../sass/_modal.scss */
 .modalDialog > div > div > p {
-  font-size: 23px;
+  margin-bottom: 13px;
+  font-family: "Hind Vadodara";
+  font-size: 20px;
+  line-height: 25px;
+  text-align: left;
 }
-
-/* line 44, ../sass/_modal.scss */
-.modalDialog > div > div {
-  position: relative;
-  top: 50px;
-  margin: 50px 40px 0px 40px;
+/* line 48, ../sass/_modal.scss */
+.modalDialog > div > div > p a {
+  color: #2ebdd1;
+  text-decoration: none;
+  font-weight: bold;
 }
-
-/* line 50, ../sass/_modal.scss */
+/* line 53, ../sass/_modal.scss */
+.modalDialog > div > div > p a:hover {
+  color: #028496;
+  text-decoration: underline;
+}
+/* line 61, ../sass/_modal.scss */
 .modalDialog > div > h2 {
   color: #343434;
   font-size: 45px;
 }
 
 /* ======== Close buttons of modal ======== */
-/* line 57, ../sass/_modal.scss */
+/* line 71, ../sass/_modal.scss */
 .close {
-  background: #ffffcc;
+  background: #2ebdd1;
   color: #f5f5f5;
+  font-family: "Hind Vadodara";
   line-height: 35px;
   position: absolute;
-  right: -12px;
   text-align: center;
-  top: -50px;
   right: 15px;
   width: 35px;
   text-decoration: none;
@@ -207,10 +215,9 @@ em {
   -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
 }
-
-/* line 75, ../sass/_modal.scss */
+/* line 87, ../sass/_modal.scss */
 .close:hover {
-  background: #a5e8c8;
+  background: #028496;
 }
 
 /* ======== Side Navigation ======== */

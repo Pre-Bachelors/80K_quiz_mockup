@@ -21,6 +21,20 @@ $(document).ready(function() {
         window.location.replace('index.html#openModal');
     });
 
+    // closes the modal window when you click anywhere outside fo it
+    $('body').click(function() {
+       var url = window.location.href;
+       var clickedModal = (JSON.stringify(url).indexOf("openModal") > -1) + 0;
+       if ( !($('#modalWindow:hover').length != 0 )) {
+           modalCount += clickedModal;
+       }
+       if ( (modalCount % 2 == 0) && (modalCount != 0) ) {
+           if ( !($('#modalWindow:hover').length != 0 )) {
+               window.location.replace('index.html#close');
+           }
+       }
+    });
+    
     // start with homepage
     $('.start').click(function() {
          window.location.replace('question.html');
@@ -39,6 +53,7 @@ $(document).ready(function() {
     // initialize app
     var $form = $('form');
     var questions = ['stem', 'writing', 'impact', 'competition', 'timing'];
+    var modalCount = 0;
 
     // remember answers using answer obj:
     var answers = {};
@@ -50,6 +65,7 @@ $(document).ready(function() {
     for (key in answers) {
         answers[key] = {answer: '', answered: false};
     }
+    console.log(answers);
     
     // Functions to load & save objects using localStorage, credit to Dan Cruickshank,
     // http://getfishtank.ca/blog/using-html5-localstorage-to-store-json
@@ -120,7 +136,8 @@ $(document).ready(function() {
             }
 
             // check radio btn
-            $answerRadio.attr('checked', true);    
+            $answerRadio.attr('checked', false);
+                                                                    // GENIUS
         }
     }
 
@@ -133,7 +150,7 @@ $(document).ready(function() {
         // change nav buttons color
         $nav_button = $('.nav_btn[data-questionref=' + page + ']');
         $nav_button.addClass('past_nav_btn');
-
+        
         // change pages using animation
         slide(page);
     }
