@@ -25,13 +25,11 @@ $(document).ready(function() {
     $('body').click(function() {
        var url = window.location.href;
        var clickedModal = (JSON.stringify(url).indexOf("openModal") > -1) + 0;
-       if ( !($('#modalWindow:hover').length != 0 )) {
+       if ( $('#modalWindow:hover').length == 0 ) {
            modalCount += clickedModal;
        }
        if ( (modalCount % 2 == 0) && (modalCount != 0) ) {
-           if ( !($('#modalWindow:hover').length != 0 )) {
-               window.location.replace('index.html#close');
-           }
+           window.location.replace('index.html#close');
        }
     });
     
@@ -40,16 +38,11 @@ $(document).ready(function() {
          window.location.replace('question.html');
     });
 
-    // final page's start over
-    $('.startOver').click(function() {
-        // clean answers
-        for (key in answers) {
-            answers[key] = {answer: '', answered: false};
-        }
-        // go back to homepage
-         window.location.replace('question.html');
-    });
-
+    // if on homepage, alert about browser compatibility
+    if (JSON.stringify(window.location.href).indexOf("index") > -1) {
+        alert('This mockup only works in Chrome or chrome-based browsers (i.e. Opera).');
+    }
+    
     // initialize app
     var $form = $('form');
     var questions = ['stem', 'writing', 'impact', 'competition', 'timing'];
@@ -122,6 +115,7 @@ $(document).ready(function() {
      * Highlights the previous answer chosen for the question, if it was answered previously
      * Parameters: name of question (string)
      */
+    var answerRadio;
     function getAnswer(page) {
         // check if question was answered
         if (answers[page].answered) {
@@ -129,7 +123,7 @@ $(document).ready(function() {
             // check if answer exists (i.e. not null or undefined)
             if (previousAnswer) {
                 // get previous answer element
-                var $answerRadio = $form.find('input[value="' + previousAnswer + '"]');
+                $answerRadio = $form.find('input[value="' + previousAnswer + '"]');
                 // highlight selected - add class: selected_btn
                 var $answerEl = $answerRadio.next();
                 $answerEl.addClass('selected_btn');
@@ -223,7 +217,7 @@ $(document).ready(function() {
 
         // reset event listeners
         init();
-
+        
         // if going to previous questions, highlight previous answer
         getAnswer(getQuestion());
     }
@@ -269,6 +263,10 @@ $(document).ready(function() {
     /* Handles selection of textAreas */
     function selectBtn(event) {
         var $selected = $(event.target);
+        // see if selected is btn, if not, selected is selected's parent (aka a button)
+        if (event.target.nodeName == 'SPAN') {
+            $selected = $(selected.parent());
+        }
         // remove highlights (of all bts)
         $selected.parent().parent().find('.textAnswer').each(function() {
             $(this).removeClass('selected_btn');

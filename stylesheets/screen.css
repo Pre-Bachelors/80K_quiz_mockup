@@ -81,7 +81,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .footer {
   width: 100%;
   height: 30px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   text-align: right;
   background-color: #ddd;
@@ -156,7 +156,7 @@ em {
   width: 440.0px;
   height: 400px;
   position: relative;
-  top: 45px;
+  top: 130px;
   border-radius: 3%;
   margin: auto;
   background: white;
@@ -339,24 +339,23 @@ em {
   background-color: #ddd;
   border-color: white;
   color: black;
-  /* bigger size */
-  width: 17%;
-  height: 100px;
+  width: 12%;
+  height: 60px;
   margin: 5%;
 }
 
-/* line 89, ../sass/_homepage.scss */
+/* line 88, ../sass/_homepage.scss */
 .about, .textAnswer {
   background-color: #2ebdd1;
   border-color: white;
 }
-/* line 93, ../sass/_homepage.scss */
+/* line 92, ../sass/_homepage.scss */
 .about a, .textAnswer a {
   color: white;
   text-decoration: none;
 }
 
-/* line 99, ../sass/_homepage.scss */
+/* line 98, ../sass/_homepage.scss */
 .start:hover, .about:hover, .textAnswer:hover, .about:hover, .textAnswer:hover {
   border-color: #01414a;
 }
