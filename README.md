@@ -17,7 +17,7 @@ Finally, it also looks neater and works better on all screen sizes (including ta
 ### Usability
 I believe this mock-up makes the whole process much more intuitive, since as soon as the user answers a question, they are automatically directed to the next one. Furthermore, the user can easily navigate between questions using either the mouse, keyboard arrows, or the side nav buttons.
 
-I also decided to 'hide' the about so that it is only visible when the user click on the respective button (a pop-up window appears). In addition to making things more readable, this also allows the user to not have to wave through unnecessary details if they're already familiar with the project.
+I also decided to 'hide' the ABOUT so that it is only visible when the user clicks on the respective button (a pop-up window appears). In addition to making things more readable, this also allows the user not to have to wave through unnecessary details if they're already familiar with the project.
 
 ### Development
 Given that I did this from scratch, and although it's not the finished product, it took me about 3 (slightly intensive) days to get togehter. This is completely front-end (remember, this is only a mock-up!), but the real implementation would use the full stack.
