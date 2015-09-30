@@ -10,7 +10,7 @@ If you only want to see it running and not have to download it, check it out [on
 ### Design
 The original quiz is a single scroll-drown page, with unnecessarily large buttons. 
 
-My take on this is to give each question its own page, which would allow for customizable paths, depeding on the previous answers (not needed right now, but surely useful as the quiz gets more complex). This also makes things less cluttered while still revealing how far along the quiz you are (through side navigation buttons).
+My take on this was to give each question its own page, which would allow for customizable paths, depeding on the previous answers (not needed right now, but surely useful as the quiz gets more complex). This also makes things less cluttered while still revealing how far along the quiz you are (through side navigation buttons).
 
 Finally, it also looks neater and works better on all screen sizes (including tablets and mobile phones, althought, bear in mind, that this is not completely reponsive yet, and mainly developed for desktops), due to smaller buttons and the single question approach.
 
